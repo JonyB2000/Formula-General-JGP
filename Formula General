@@ -1,0 +1,53 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+	var tempMtyF = 55.4;
+	tempMtyC = FarToC(tempMtyF);
+	console.log(tempMtyC);
+var catA = 3;
+var catB = 3;
+var h;
+h = hipotenusa(catA, catB);
+console.log(h);
+var a = 1;
+var b = 2;
+var c = 3;
+var X;
+var X1;
+X = FG(a,b,c);
+X1 = FG1(a,b,c);
+}
+
+function CelsToF(tempC){
+	var tempF;
+	tempF = (9/5)*tempC+32;
+	return tempF;
+}
+
+
+function FarToC(temF){
+	var tempC;
+	tempC = (temF-32)/(5/9);
+	return tempC;
+}
+
+function hipotenusa(catA, catB) {	
+	var hip;
+hip = sqrt(pow(catA,2)+pow(catB,2));
+return hip;
+}
+
+function FG(a,b,c){
+var FG;
+FG = (-b + sqrt(pow(b,2)-4*a*c))/(2*a);
+return FG;
+}
+
+function FG1(a,b,c){
+var FG1;
+FG1 = (-b - sqrt(pow(b,2)-4*a*c))/(2*a);
+return FG1;
+}
